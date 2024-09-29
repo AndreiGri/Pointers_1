@@ -7,11 +7,16 @@ void Swap(int* pa, int* pb)                            // Метод для пе
     *pa -= *pb;                                        // Из значения первого разъименнованного указателя вычитаем значение второго
 }
 
+void show_result(int* pa, int* pb)                     // Метод для вывода значений переменных
+{
+    std::cout << ' ' << "a = " << *pa << ", " << "b = " << *pb << std::endl;
+}
+
 int main()
 {
     int a = 5;
     int b = 10;
+    show_result(&a, &b);
     Swap(&a, &b);
-
-    std::cout << ' ' << a << ' ' << b << std::endl;   
+    show_result(&a, &b);   
 }
